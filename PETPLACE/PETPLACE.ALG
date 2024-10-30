@@ -1,4 +1,5 @@
 Algoritmo "PetPlace"
+// Disciplina   : [Linguagem e Lógica de Programação] 
 // Data atual  : 24/10/2024
 
 //COMPRA POR QUILO!
