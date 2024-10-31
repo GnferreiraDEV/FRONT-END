@@ -6,14 +6,13 @@ var
 
     nomes: vetor[0..2] de caractere
     valores: vetor[0..2] de real
-    total: real
-    media: real
+    total, media : real
     i: inteiro
     
 inicio
 
     para i de 0 ate 2 faca
-        escreval("Digite o nome da mercadoria ", i + 1, ": ")
+        escreval("Digite a mercadoria ", i + 1, ": ")
         leia(nomes[i])
 escreval()
         escreval("Digite o valor da mercadoria ", i + 1, ": ")
