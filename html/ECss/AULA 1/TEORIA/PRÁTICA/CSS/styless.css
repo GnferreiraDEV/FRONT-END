@@ -7,6 +7,8 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+
+
 .box-around{
     margin: 0 220px; /* Ajustando as margens laterais para não ultrapassar as barras laterais */
     padding: 20px;
@@ -118,6 +120,47 @@ body {
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+}
+
+.column {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 30%; 
+    text-align: center;
+  }
+  
+  .column.side {
+    width: 25%;
+ 
+  }
+  
+  .imagem-pequena {
+    display: block; 
+    width: 150px;
+    margin: 0 auto; 
+  }
+
+  .column.middle {
+    width: 40%;
+    border: 2px solid;
+  }
+
+  img {
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid;
+}
+td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
 }
 
 @keyframes fade {
