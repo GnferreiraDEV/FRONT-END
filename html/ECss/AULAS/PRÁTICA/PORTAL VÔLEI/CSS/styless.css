@@ -53,7 +53,7 @@ body {
 .topnav-esquerda {
     float: left;
     width: 5%; 
-    height: 230vh; 
+    height: 130vh; 
     background: #0e0d0d;
     padding: 20px;
     box-sizing: border-box; 
@@ -62,7 +62,7 @@ body {
 .topnav-direita {
   float: right;
   width: 5%; 
-  height: 230vh; 
+  height: 130vh; 
   background: #0e0d0d;
   padding: 20px;
   box-sizing: border-box; 
