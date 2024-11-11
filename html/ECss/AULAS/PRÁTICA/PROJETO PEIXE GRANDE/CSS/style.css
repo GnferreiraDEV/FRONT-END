@@ -21,6 +21,7 @@ header {
 nav ul {
     list-style-type: none;
     padding: 10px 0;
+    float: right;
     
 }
 
@@ -33,5 +34,100 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     font-size: 20px;
-
 }
+
+.topnav-esquerda {
+    float: left;
+    width: 5%; 
+    height: 132.6vh; 
+    background: black;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.topnav-direita {
+  float: right;
+  width: 5%; 
+  height: 132.6vh; 
+  background: black;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.image-flex{
+    height: 300px;
+    display: flex;
+}
+
+.image-flex img:first-child{
+
+   flex: 1;
+    
+}
+
+.image-flex img:last-child{
+
+    flex: 2;
+     
+ }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.servicos{
+
+    width: 58%;
+
+} .agenda {
+    width: 38%;
+}
+
+.servicos h2, .agenda h2 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.servicos h3 {
+    margin-top: 10px;
+    color: black;
+}
+
+.agenda .event {
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: black;
+    color: #fff;
+}
+
+.mapa {
+    width: 25%;
+    background-color: black;
+    color: #fff;
+    float: left;
+    padding: 15px;
+}
+
+ .mapa ul {
+    list-style: none;
+}
+
+ .mapa ul li {
+    margin-top: 15px;
+}
+
+.mapa ul li a {
+    text-decoration: none;
+    color: white;
+}
+
