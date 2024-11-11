@@ -39,7 +39,7 @@ nav ul li a {
 .topnav-esquerda {
     float: left;
     width: 5%; 
-    height: 132.6vh; 
+    height: 135.2vh; 
     background: black;
     padding: 20px;
     box-sizing: border-box; 
@@ -48,7 +48,7 @@ nav ul li a {
 .topnav-direita {
   float: right;
   width: 5%; 
-  height: 132.6vh; 
+  height: 135.2vh; 
   background: black;
   padding: 20px;
   box-sizing: border-box; 
@@ -78,10 +78,13 @@ nav ul li a {
 }
 
 .servicos{
-
+    padding: 10px;
+    border: 2px solid;
     width: 58%;
 
 } .agenda {
+    padding: 10px;
+    border: 2px solid;
     width: 38%;
 }
 
