@@ -118,6 +118,16 @@ h1{
     height: 200px;
 }
 
+.img-box{
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .img-box:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
 
 footer {
     display: flex;
