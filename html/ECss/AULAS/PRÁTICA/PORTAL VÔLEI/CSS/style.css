@@ -70,22 +70,23 @@
   }
   
   .topnav {
-    overflow: hidden;
     background-color: black;
-  }
-  
-  .topnav a {
-    display: block;
-    color: #f2f2f2;
+    width: 100%; /* Garante que a topnav ocupe toda a largura da tela */
     text-align: center;
+    padding: 14px 0;
+}
+
+.topnav a {
+    color: #f2f2f2;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  .topnav a:hover {
+    display: inline-block;
+}
+
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
   .row {
     display: flex;
@@ -122,6 +123,16 @@ td {
     display: block; 
     width: 150px;
     margin: 0 auto; 
+  }
+
+  .imagem-pequena{
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .imagem-pequena:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
   }
   
   .column.middle {
