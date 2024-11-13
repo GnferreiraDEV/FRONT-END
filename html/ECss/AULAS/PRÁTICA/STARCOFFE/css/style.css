@@ -9,6 +9,7 @@ body {
     background-color: #fff;
     color: #000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
    
 }
 
@@ -40,7 +41,7 @@ nav ul li a {
 .topnav-esquerda {
     float: left;
     width: 5%; 
-    height: 197.8vh; 
+    height: 212.3vh; 
     background: #556B2F;
     padding: 20px;
     box-sizing: border-box; 
@@ -49,26 +50,22 @@ nav ul li a {
 .topnav-direita {
   float: right;
   width: 5%; 
-  height: 197.8vh; 
+  height: 212.3vh; 
   background: #556B2F;
   padding: 20px;
   box-sizing: border-box; 
 }
 
 h1{
-   padding: 15px;
+    text-align: center;
+    padding: 15px;
     width: 100%;
-    margin: 20px;
+    
+    
     
 }
 
-.texto{
-    text-align: center;
-    padding: 20px;
-    border: 20px;
-    height: 50%;
-    
-}
+
 
 .pai{
     /* posicionamento no pai */
@@ -144,12 +141,29 @@ h1{
     height: 100vh;
 }
 
+
+
 img{
 
     width: 750px;
     height: 450px;
     border-radius: 15px;
    
+}
+
+.pae {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    height: 100%;              
+}
+
+.texto {
+    padding: 20px;
+    border: 3px solid #556B2F;   
+    text-align: center;
+    width: 70%;
+    height: 70%;
 }
 
 
