@@ -4,9 +4,9 @@
 }
 
 :root{
-    --primary-color: rgb(61, 33, 33);
-    --secondary-color: black;
-    --white: rgb(233, 232, 232);
+    --primary-color: black;
+    --secondary-color: rgb(239, 235, 235);
+    --white: black;
 }
 
 #top{
@@ -22,9 +22,96 @@ header, footer{
     justify-content: space-around;
 }
 
-nav{
+.categoria-bar ul {
+    list-style-type: none; 
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+}
+
+
+.categoria-bar ul li {
+    margin: 0 15px; 
+}
+
+
+.categoria-bar ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 15px;
+    padding: 3px 8px; 
+    border-radius: 3px; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.categoria-bar ul li a:hover {
+    background-color: var(--white); 
+}
+
+
+@media (max-width: 600px) {
+    .categoria-bar ul {
+        flex-direction: column; 
+    }
+
+    .categoria-bar ul li {
+        margin: 10px 0;
+    }
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel img {
+    width: 100vw; /* A imagem ocupa 100% da largura da janela */
+    height: auto;
+}
+
+/* Estilo dos botões de navegação */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+#menu {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 0;
+    min-height: auto;
+    margin: 0;
+    padding: 10px;
+}
+
+div.container {
+    width: 98%;
 }
 
 #logo{

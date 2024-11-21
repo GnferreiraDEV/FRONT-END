@@ -19,3 +19,22 @@ function carregarCatalogo(){
     }
 }
 carregarCatalogo();
+
+
+let index = 0;
+
+function moverCarrossel(direcao) {
+    const imagens = document.querySelectorAll('.carrossel img');
+    const totalImagens = imagens.length;
+
+    index += direcao;
+
+    if (index < 0) {
+        index = totalImagens - 1; // Vai para a última imagem
+    } else if (index >= totalImagens) {
+        index = 0; // Vai para a primeira imagem
+    }
+
+    const carrossel = document.querySelector('.carrossel');
+    carrossel.style.transform = `translateX(-${index * 100}vw)`; // Muda a imagem usando a largura da tela
+}
