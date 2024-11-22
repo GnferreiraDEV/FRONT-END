@@ -22,6 +22,10 @@ header, footer{
     justify-content: space-around;
 }
 
+h1{
+    padding: 25px;
+}
+
 .categoria-bar ul {
     list-style-type: none; 
     display: flex;
@@ -72,9 +76,59 @@ header, footer{
     padding: 10px;
 }
 
-div.container {
-    width: 98%;
-}
+.meu-carrossel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centraliza o carrossel na página */
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  
+  .meu-carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .meu-carrossel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .meu-carrossel img {
+    width: 100%;
+    display: block;
+  }
+  
+  .meu-carrossel-anterior,
+  .meu-carrossel-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+  
+  .meu-carrossel-anterior {
+    left: 10px;
+  }
+  
+  .meu-carrossel-proximo {
+    right: 10px;
+  }
+  
+  .meu-carrossel-anterior:hover,
+  .meu-carrossel-proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
 
 #logo{
     display: flex;
@@ -102,7 +156,7 @@ a{
 
 .livro{
     width: 250px;
-    padding: 5px;
+    padding: 15px;
     background-color: var(--secondary-color);
     color: var(--white);
     display: flex;
@@ -111,5 +165,10 @@ a{
     gap: 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+.livro-img {
+    width: 130px; /* Define a largura */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
