@@ -32,6 +32,36 @@ function carregarCatalogo(){
 carregarCatalogo();
 
 
+function carregarFilmes() {  
+    
+    const filmes = [
+        { imagem: 'icons/image/filme1.jpg', titulo: 'Marighella' },
+        { imagem: 'icons/image/filme2.jpg', titulo: 'Minha Mãe É uma Peça 3' },
+        { imagem: 'icons/image/filme3.jpg', titulo: 'Alemão' },
+        { imagem: 'icons/image/filme4.jpg', titulo: 'Uma Família Feliz' },
+        { imagem: 'icons/image/filme5.jpg', titulo: 'Meu Passado Me Condena' },
+        { imagem: 'icons/image/filme6.jpg', titulo: 'Medida Provisória' },
+    ];
+
+    for (let i = 0; i < filmes.length; i++) {
+        document.getElementById('filmes').innerHTML += `  <!-- Alterado de catalogo para filmes -->
+        <div class="filme">  <!-- Alterado de .livro para .filme -->
+            <img src="${filmes[i].imagem}" alt="Filme ${i + 1}" class="filme-img">  <!-- Alterado de .livro-img para .filme-img -->
+            <h4>${filmes[i].titulo}</h4>
+
+            <button>
+                Assistir
+                <img src="icons/plus.svg" alt="">
+            </button>
+        </div>
+        `;
+    }
+}
+carregarFilmes();  
+
+
+
+
 let indiceAtual = 0;
 
 function exibirSlide(indice) {

@@ -26,6 +26,10 @@ h1{
     padding: 25px;
 }
 
+h3{
+    padding-left: 25px;
+}
+
 .categoria-bar ul {
     list-style-type: none; 
     display: flex;
@@ -148,7 +152,7 @@ a{
     width: 80px;
     margin: 10px auto;
     padding: 20px;
-    background-color: var (--white);
+    background-color: var (--primary-color);
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -170,5 +174,43 @@ a{
 .livro-img {
     width: 130px; /* Define a largura */
     height: auto; /* Mantém a proporção da imagem */
+}
+
+
+#filmes {  
+    
+    width: 80px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: var (--primary-color);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.filme {  
+    width: 250px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.filme-img {  
+    width: 130px; /* Define a largura */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
