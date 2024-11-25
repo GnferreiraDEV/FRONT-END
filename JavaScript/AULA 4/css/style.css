@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
+    
 }
 
 :root{
@@ -169,6 +170,7 @@ a{
     gap: 10px;
     border-radius: 10px;
     text-align: center;
+    border: 2px black solid;
 }
 
 .livro-img {
@@ -176,6 +178,15 @@ a{
     height: auto; /* Mantém a proporção da imagem */
 }
 
+.livro-img{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.livro-img:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
 
 #filmes {  
     
@@ -200,17 +211,71 @@ a{
     gap: 10px;
     border-radius: 10px;
     text-align: center;
+    border: 2px black solid;
 }
 
 .filme-img {  
     width: 130px; /* Define a largura */
     height: auto; /* Mantém a proporção da imagem */
 }
+.filme-img{
+    transition: all 0.5s;
+    cursor: pointer;
+}
 
+.filme-img:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
 
 button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card {
+    display: flex;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.book-cover{
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.btn:hover {
+    background-color: #e6e6e6;
 }
 
