@@ -20,7 +20,7 @@ class usuario {
     }
 }
 
-var user1 = new usuario (1,'GNferreiraDEV', 'Gustavo Ferreira', 'gustavonf@gmail.com', 'Estudante de Tecnologia da Informação', 'Masc')
+var user1 = new usuario (1,'INÁCIO123PT', 'Gustavo Ferreira', 'gustavonf@gmail.com', 'Estudante de Tecnologia da Informação', 'Masc')
 var user2 = new usuario (2, 'stellaaaa', 'Outra Stella', 'algumemail@gmail.com', 'a mesma de antes', 'feminino')
 
 function postarFeed() {
