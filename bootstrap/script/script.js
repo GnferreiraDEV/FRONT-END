@@ -14,9 +14,9 @@ lista_categorias.push(new Categoria(
     'Jack & Coke',
     'image/preto.jpg',
     'Uma combinação clássica de whisky e refrigerante, perfeita para qualquer ocasião.',
-    '@HÉLEN',
+    '@HELEN',
     [
-        '50ml de Jack Daniel\'s',
+        '50ml de Suco de limão',
         '150ml de Coca-Cola',
         'Gelo'
     ]
@@ -110,7 +110,35 @@ lista_categorias.push(new Categoria(
         '100ml de Ginger Beer',
         '10ml de Suco de limão',
         ,
-        'Fatias de limão e hortelã para decorar'
+        'Fatias de limão e hortelã'
+    ]
+));
+
+lista_categorias.push(new Categoria(
+    'Caipirinha',
+    'image/caip.jpg',
+    'Cachaça e limão: uma mistura refrescante.',
+    '@STELLA',
+    [
+        '20ml de Limão',
+        '100ml de Cachaça',
+        'Gelo',
+        ,
+        'Fatias de limão e hortelã'
+    ]
+));
+
+lista_categorias.push(new Categoria(
+    'Daikiri ',
+    'image/moran.jpg',
+    'Morango, Gin, combinação tropical.',
+    '@ROHOD',
+    [
+        '20ml de Extrato de morango',
+        '100ml de Gin',
+        'Gelo',
+        ,
+        'Fatias de Morango'
     ]
 ));
 
