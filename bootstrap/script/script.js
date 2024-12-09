@@ -166,3 +166,4 @@ lista_categorias.forEach(categoria => {
     </div>
     `;
 });
+
