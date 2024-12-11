@@ -1,7 +1,7 @@
-// Lista para armazenar as categorias
+
 let lista_categorias = [];
 
-// Definição da classe Categoria
+
 class Categoria {
     constructor(titulo, img, desc) {
         this.titulo = titulo;
@@ -10,76 +10,75 @@ class Categoria {
     }
 }
 
-// Adicionando categorias à lista
+
 lista_categorias.push(new Categoria(
     'WHISKY',
     '../image/CATALOGO/whisky.jpg',
-    'Uma combinação clássica de whisky e refrigerante, perfeita para qualquer ocasião.'
+    'Um destilado encorpado e amadeirado, ideal para quem aprecia sabores intensos e complexos.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Aperol Spritz',
+    'GIN',
     '../image/CATALOGO/gin.jpg',
-    'Um drink refrescante e leve, ideal para os dias quentes.'
+    'Uma bebida destilada com notas de zimbro e ervas, fresca e aromática, perfeita para coquetéis como o gin tônica.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Gin Tônica',
+    'RUM',
     '../image/CATALOGO/rum.jpg',
-    'Refrescante e elegante, o gin tônica é um clássico.'
+    'Uma bebida destilada de cana-de-açúcar, com sabor doce e suave, popular em coquetéis tropicais.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Dry Martini',
+    'VINHO',
     '../image/CATALOGO/vinho.jpg',
-    'Um dos drinks mais sofisticados e famosos do mundo.'
+    'Bebida fermentada feita de uvas, com uma vasta gama de sabores que variam de secos a doces, excelente para harmonizações.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Marquerita',
+    'VODKA',
     '../image/CATALOGO/vodka.jpg',
-    'Tequila, limão e sal: uma combinação irresistível!'
+    'Destilada e pura, a vodka é uma bebida forte e neutra, ideal para ser misturada com sucos ou ingredientes em coquetéis.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Negroni',
+    'ANGEL´S ENVYY',
     '../image/CATALOGO/bebida.jpg',
-    'Um clássico italiano com gin, vermute e Campari.'
+    'Whisky bourbon premium, suave e aveludado, com notas de baunilha, caramelo e especiarias.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Whisky',
-    '../image/CATALOGO/whisky.jpg',
-    'O tradicional whisky servido com gelo.'
+    'HARDSHORE',
+    '../image/CATALOGO/gin2.jpg',
+    'Gin artesanal com toques de frutas e especiarias, ideal para quem busca um sabor mais intenso e marcante.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Moscow Mule',
-    '../image/CATALOGO/whisky.jpg',
-    'Vodka, ginger beer e limão: uma mistura explosiva de sabores.'
+    'MAEKER´S MARK',
+    '../image/CATALOGO/rum2.jpg',
+    'Bourbon whiskey de sabor suave e levemente adocicado, com um final de caramelo e baunilha.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Caipirinha',
-    '../image/CATALOGO/whisky.jpg',
-    'Cachaça e limão: uma mistura refrescante.'
+    'ESPRIT',
+    '../image/CATALOGO/vinho2.jpg',
+    'Vinho sofisticado com aromas frutados e secos, perfeito para acompanhar pratos gourmet ou ser apreciado sozinho.'
 ));
 
 lista_categorias.push(new Categoria(
-    'Daikiri',
-    '../image/CATALOGO/whisky.jpg',
-    'Morango, Gin, combinação tropical.'
+    'SMIRNOFF',
+    '../image/CATALOGO/vodka2.jpg',
+    'Vodka de alta qualidade, conhecida por sua suavidade e versatilidade, perfeita para diversos coquetéis.'
 ));
 
-// Exibindo as categorias na página com o título acima da imagem e descrição abaixo
+
+
 lista_categorias.forEach(categoria => {
     document.querySelector('#categoriaItems').innerHTML += `
-    <div class="card" style="width: 18rem; background-color: black;">
-        <h5 class="card-title text-white" style="padding: 10px;">${categoria.titulo}</h5>
+    <div class="card" style="width: 18rem; background-color: black; margin-bottom: 20px;">
+        <h5 class="card-title text-white" style="padding: 15px; text-align: center;"><strong>${categoria.titulo}</strong></h5>
         <img src="${categoria.img}" class="card-img-top" alt="${categoria.titulo}" style="height: 350px; width: 100%; object-fit: cover; border-radius: 10px;">
-        <p class="card-text text-white" style="padding: 10px;">${categoria.desc}</p>
+        <p class="card-text text-white" style="padding: 15px; margin-top: 10px;">${categoria.desc}</p>
     </div>
     `;
 });
-
-
