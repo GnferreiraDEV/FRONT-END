@@ -1,12 +1,12 @@
-lista_categorias = []
+lista_categorias = [];
 
 class Categoria {
     constructor(titulo, img, desc, marca, ingredientes){
-        this.titulo = titulo
-        this.img = img
-        this.desc = desc
-        this.marca = marca
-        this.ingredientes = ingredientes
+        this.titulo = titulo;
+        this.img = img;
+        this.desc = desc;
+        this.marca = marca;
+        this.ingredientes = ingredientes;
     }
 }
 
@@ -31,7 +31,6 @@ lista_categorias.push(new Categoria(
         '60ml de Aperol',
         '90ml de Prosecco',
         '30ml de Água com gás',
-        ,
         'Fatias de laranja'
     ]
 ));
@@ -71,7 +70,6 @@ lista_categorias.push(new Categoria(
         '30ml de Triple Sec',
         '20ml de Suco de limão fresco',
         'Sal para a borda do copo',
-       
     ]
 ));
 
@@ -84,7 +82,6 @@ lista_categorias.push(new Categoria(
         '30ml de Gin',
         '30ml de Vermute doce',
         '30ml de Campari',
-        ,
         'Casca de laranja para decorar'
     ]
 ));
@@ -109,7 +106,6 @@ lista_categorias.push(new Categoria(
         '50ml de Vodka',
         '100ml de Ginger Beer',
         '10ml de Suco de limão',
-        ,
         'Fatias de limão e hortelã'
     ]
 ));
@@ -123,7 +119,6 @@ lista_categorias.push(new Categoria(
         '20ml de Limão',
         '100ml de Cachaça',
         'Gelo',
-        ,
         'Fatias de limão e hortelã'
     ]
 ));
@@ -137,26 +132,37 @@ lista_categorias.push(new Categoria(
         '20ml de Extrato de morango',
         '100ml de Gin',
         'Gelo',
-        ,
         'Fatias de Morango'
     ]
 ));
 
+// Inserir as categorias no HTML
 lista_categorias.forEach(categoria => {
     document.querySelector('#categoriaItems').innerHTML += `
-    <div class="card mb-3 " style="max-width: 540px; background-color: black; ">
-        <div class="row g-0 ">
-            <div class="col-md-4 ">
-                <img src="${categoria.img}" class="img-fluid rounded-start img-fluid rounded " alt="...">
+    <div class="card mb-3" style="max-width: 540px; background-color: black;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="${categoria.img}" class="img-fluid rounded-start" alt="${categoria.titulo}">
             </div>
-            <div class="col-md-8 ">
+            <div class="col-md-8">
                 <div class="card-body text-white">
                     <h5 class="card-title">${categoria.titulo}</h5>
-                    <p class="card-text">${categoria.desc}</p>
-                    <p class="card-text">
-                        <strong>Ingredientes:</strong><br>
-                        ${categoria.ingredientes.map(ingrediente => `<span>- ${ingrediente}</span><br>`).join('')}
-                    </p>
+                    
+                    <!-- Botão "Ver Descrição" -->
+                    <button id="verDescricao-${categoria.titulo}" class="btn btn-outline-light" onclick="toggleDescricao('${categoria.titulo}')">Ver Descrição</button>
+                    
+                    <!-- Descrição, inicialmente oculta -->
+                    <div id="descricao-${categoria.titulo}" class="descricao" style="display: none;">
+                        <p class="card-text">${categoria.desc}</p>
+                        <p class="card-text">
+                            <strong>Ingredientes:</strong><br>
+                            ${categoria.ingredientes.map(ingrediente => `<span>- ${ingrediente}</span><br>`).join('')}
+                        </p>
+                    </div>
+                    
+                    <!-- Botão "Fechar Descrição", inicialmente oculto -->
+                    <button id="fecharDescricao-${categoria.titulo}" class="btn btn-outline-light" style="display: none;" onclick="toggleDescricao('${categoria.titulo}')">Fechar Descrição</button>
+
                     <p class="card-text">
                         <small class="text-white">${categoria.marca}</small>
                     </p>
@@ -167,3 +173,21 @@ lista_categorias.forEach(categoria => {
     `;
 });
 
+// Função para alternar a visibilidade da descrição e alterar o texto do botão
+function toggleDescricao(titulo) {
+    const descricao = document.getElementById(`descricao-${titulo}`);
+    const verDescricaoBtn = document.getElementById(`verDescricao-${titulo}`);
+    const fecharDescricaoBtn = document.getElementById(`fecharDescricao-${titulo}`);
+    
+    if (descricao.style.display === "none") {
+        descricao.style.display = "block";  // Exibe a descrição
+        verDescricaoBtn.style.display = "none";  // Esconde o botão "Ver Descrição"
+        fecharDescricaoBtn.style.display = "inline-block";  // Exibe o botão "Fechar Descrição"
+        fecharDescricaoBtn.innerText = "Fechar Descrição";  // Altera o texto do botão para "Fechar Descrição"
+    } else {
+        descricao.style.display = "none";  // Esconde a descrição
+        verDescricaoBtn.style.display = "inline-block";  // Exibe o botão "Ver Descrição"
+        fecharDescricaoBtn.style.display = "none";  // Esconde o botão "Fechar Descrição"
+        verDescricaoBtn.innerText = "Ver Descrição";  // Altera o texto do botão de volta para "Ver Descrição"
+    }
+}
