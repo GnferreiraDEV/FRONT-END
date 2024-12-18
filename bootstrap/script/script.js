@@ -173,21 +173,21 @@ lista_categorias.forEach(categoria => {
     `;
 });
 
-// Função para alternar a visibilidade da descrição e alterar o texto do botão
+
 function toggleDescricao(titulo) {
     const descricao = document.getElementById(`descricao-${titulo}`);
     const verDescricaoBtn = document.getElementById(`verDescricao-${titulo}`);
     const fecharDescricaoBtn = document.getElementById(`fecharDescricao-${titulo}`);
     
     if (descricao.style.display === "none") {
-        descricao.style.display = "block";  // Exibe a descrição
-        verDescricaoBtn.style.display = "none";  // Esconde o botão "Ver Descrição"
-        fecharDescricaoBtn.style.display = "inline-block";  // Exibe o botão "Fechar Descrição"
-        fecharDescricaoBtn.innerText = "Fechar Descrição";  // Altera o texto do botão para "Fechar Descrição"
+        descricao.style.display = "block";  
+        verDescricaoBtn.style.display = "none"; 
+        fecharDescricaoBtn.style.display = "inline-block"; 
+        fecharDescricaoBtn.innerText = "Fechar Descrição";  
     } else {
-        descricao.style.display = "none";  // Esconde a descrição
-        verDescricaoBtn.style.display = "inline-block";  // Exibe o botão "Ver Descrição"
-        fecharDescricaoBtn.style.display = "none";  // Esconde o botão "Fechar Descrição"
-        verDescricaoBtn.innerText = "Ver Descrição";  // Altera o texto do botão de volta para "Ver Descrição"
+        descricao.style.display = "none"; 
+        verDescricaoBtn.style.display = "inline-block";  
+        fecharDescricaoBtn.style.display = "none";  
+        verDescricaoBtn.innerText = "Ver Descrição";  
     }
 }
